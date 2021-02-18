@@ -1,7 +1,11 @@
 package com.darothub.usermicroservice;
 
+import com.darothub.usermicroservice.model.Artisan;
 import com.darothub.usermicroservice.model.response.ErrorResponse;
 import com.darothub.usermicroservice.model.response.SuccessResponse;
+import com.darothub.usermicroservice.repositories.UserRepository;
+import org.apache.tomcat.util.json.ParseException;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -11,6 +15,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class UserMicroServiceApplication {
@@ -34,14 +40,5 @@ public class UserMicroServiceApplication {
     }
 
 
-//    @Bean
-//    public AuthenticationManager authenticationManagerBean() throws Exception {
-//        return new AuthenticationManager() {
-//            @Override
-//            public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-//                return null;
-//            }
-//        };
-//    }
 
 }
